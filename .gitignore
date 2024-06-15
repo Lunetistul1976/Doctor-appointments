@@ -1,0 +1,10 @@
+# Ignore the virtual environment folder
+django-env/
+
+# Ignore other common Django files and folders
+*.pyc
+__pycache__/
+db.sqlite3
+/media/
+/staticfiles/
+/.env
