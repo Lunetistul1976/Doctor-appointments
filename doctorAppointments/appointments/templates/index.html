@@ -2,6 +2,14 @@
 <section>
   <div>
     <h1>Bookings List</h1>
+    {% for appointment in bookings %}
+    <div class="row">
+      <span> {{appointment.first_name}} </span>
+      <span> {{appointment.last_name}} </span>
+      <span> {{appointment.age}} </span>
+      <span> {{appointment.dateOfBirth}} </span>
+    </div>
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

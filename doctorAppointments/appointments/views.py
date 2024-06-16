@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from .forms import BookingForm
+from .models import Booking
 
 # Create your views here.
 
 def home(request):
-    return render(request,'index.html')
+    bookings_list = Booking.objects.all()
+    bookings_data = {'bookings':bookings_list}    
+    return render(request,'index.html',bookings_data)
 
 def book(request):
     form = BookingForm()
