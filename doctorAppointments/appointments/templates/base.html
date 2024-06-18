@@ -14,7 +14,7 @@
     <link
       rel="preload"
       as="style"
-      href="{% static 'css/style.css' %}"
+      href="{% static 'css/styles.css' %}"
       onload="this.rel = 'stylesheet'"
     />
   </head>
@@ -26,6 +26,5 @@
     <main>{% block content %} {% endblock %}</main>
 
     <!--Footer content-->
-    {% include 'partials/_footer.html' %}
   </body>
 </html>

@@ -16,4 +16,4 @@ class Booking(models.Model):
     validators=[RegexValidator(regex=r'^\+?4?\d{10,12}$',message='Please enter a valid phone mumber')])
     typeOfService = models.CharField(max_length=300)
     def __str__(self):
-        return self.first_name + '' + self.last_name
+        return self.first_name + ' ' + self.last_name

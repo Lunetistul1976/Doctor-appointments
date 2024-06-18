@@ -1,15 +1,43 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <section>
-  <div>
+  <div class='container'>
     <h1>Bookings List</h1>
-    {% for appointment in bookings %}
-    <div class="row">
-      <span> {{appointment.first_name}} </span>
-      <span> {{appointment.last_name}} </span>
-      <span> {{appointment.age}} </span>
-      <span> {{appointment.dateOfBirth}} </span>
+    <div class="table">
+      <div class="row">
+        <span>First Name</span>
+        <span>Last Name</span>
+        <span>Age</span>
+        <span>Date of Birth</span>
+        <span>Email</span>
+        <span>Phone Number</span>
+        <span>PIC</span>
+        <span>Medic</span>
+        <span>Types of Service</span>
+        <span>Appointment Time</span>
+      </div>
+      <div>
+      {% for appointment in bookings %}
+
+      <a href="{% url 'booking_detail' pk=appointment.pk  %}" style='text-decoration:none;color:black' class='appointment-link'>
+      <div class="row" >
+        <span> {{appointment.first_name}} </span>
+        <span> {{appointment.last_name}} </span>
+        <span> {{appointment.age}} </span>
+        <span> {{appointment.dateOfBirth}} </span>
+        <span> {{appointment.email}} </span>
+        <span> {{appointment.phoneNumber}} </span>
+        <span> {{appointment.personalNumericCode}} </span>
+        <span> {{appointment.medic}} </span>
+        <span> {{appointment.typeOfService}} </span>
+        <span> {{appointment.appointmentTime}} </span>
+      </div>
+    </a>
+      {% endfor %}
+      <div>
     </div>
-    {% endfor %}
   </div>
+<script>
+
+</script>
 </section>
 {% endblock %}
