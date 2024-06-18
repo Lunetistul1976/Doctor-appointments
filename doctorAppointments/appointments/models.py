@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 
 class Booking(models.Model):
     age = models.IntegerField()
-    appointmentTime = models.DateTimeField()
+    appointmentDateAndTime = models.DateTimeField()
     created_at = models.DateField(auto_now_add=True)
     dateOfBirth = models.DateField()
     email = models.EmailField()

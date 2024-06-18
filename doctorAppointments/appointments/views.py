@@ -1,4 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
+from django.urls import reverse
 from .forms import BookingForm
 from .models import Booking
 from rest_framework.views import APIView
@@ -20,8 +21,8 @@ def book(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            redirect('/')
-            form = BookingForm()
+            return redirect('/')
+    
     context = {'form':form}
     return render(request, 'book.html', context)
 
