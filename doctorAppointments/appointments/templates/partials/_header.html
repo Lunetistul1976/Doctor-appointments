@@ -1,8 +1,15 @@
 {% load static %}
 
+<link
+  rel="preload"
+  as="style"
+  href="{% static 'css/styles.css' %}"
+  onload="this.rel = 'stylesheet'"
+/>
+
 <nav>
-  <ul>
-    <li><a href="{% url 'home' %}">Bookings List</a></li>
-    <li><a href="{% url 'book' %}">Book</a></li>
+  <div class="navbar-links">
+    <a href="{% url 'home' %}">Bookings List</a>
+    <a href="{% url 'book' %}">Book</a>
   </ul>
 </nav>

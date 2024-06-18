@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <section>
-  <article>
+  <article class="form-container">
     <h1>Update Booking</h1>
     <form method="post" id="updateForm">
       {% csrf_token %} {{ form.as_p }}
-      <div style="display: flex; gap: 16px">
-        <button type="submit">Update</button>
+      <div style="display: flex; gap: 64px; padding-left: 24px">
+        <button type="submit" id="button">Update</button>
         <button id="deleteButton">Delete</button>
       </div>
     </form>
