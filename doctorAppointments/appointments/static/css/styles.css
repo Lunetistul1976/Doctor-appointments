@@ -80,7 +80,7 @@ form {
   font-weight: 700;
   font-size: 14px;
   height: 40px;
-  width: 80px;
+  width: 70px;
 }
 
 #deleteButton {
@@ -91,7 +91,7 @@ form {
   font-weight: 700;
   font-size: 14px;
   height: 40px;
-  width: 80px;
+  width: 70px;
 }
 
 .navbar-links {
@@ -112,4 +112,15 @@ form {
 
 section {
   padding-top: 24px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
