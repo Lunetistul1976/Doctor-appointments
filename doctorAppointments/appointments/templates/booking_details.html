@@ -2,7 +2,7 @@
 <section>
   <article class="form-container">
     <h1 style="padding-right: 36px">Update Booking</h1>
-    <form method="post" id="updateForm">
+    <form method="post" id="updateForm" autocomplete="off">
       {% csrf_token %} {% for field in form %}
       <div class="input-with-label">
         <label for="{{ field.id_for_label }}">{{ field.label }}</label>

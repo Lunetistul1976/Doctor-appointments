@@ -2,7 +2,7 @@
 <section>
   <article class="form-container">
     <h1 style="padding-right: 28px">Make a reservation</h1>
-    <form action="" method="post">
+    <form action="" method="post" autocomplete="off">
       {% csrf_token %} {% for field in form %}
       <div class="input-with-label">
         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
